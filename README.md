@@ -1,1 +1,1 @@
-# ChessProject
+# ChessProject from Simge, Tamanna and Nikolai
