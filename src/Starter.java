@@ -5,6 +5,5 @@ public class Starter {
         game.startGame();
         game.whereToMove();
 
-        //BYE
     }
 }
