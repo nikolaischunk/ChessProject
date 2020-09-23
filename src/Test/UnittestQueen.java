@@ -1,3 +1,5 @@
+package Test;
+
 class UnittestQueen {
 
     @org.junit.jupiter.api.BeforeEach
