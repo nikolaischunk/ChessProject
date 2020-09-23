@@ -3,8 +3,6 @@ package Test;
 import Chess.Color;
 import Chess.Queen;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
@@ -14,50 +12,36 @@ class QueenTest {
 
 
     @Test
-    void canMove() {
-        //BLACK
-        Queen queenB = new Queen(Color.BLACK);
-        Point currentLocationB = new Point(5,1);
-        Point targetLocationB = new Point(5,5);
-
-        //WHITE
-        Queen queenW = new Queen(Color.WHITE);
-        Point currentLocationW = new Point(5,1);
-        Point targetLocationW = new Point(5,5);
-        Assertions.assertThat(queenW.canMove(currentLocationW, targetLocationW)).isEqualTo(true);
-    }
-
-    @Test
-    void getMovingPath(){
-        //BLACK
-        Queen queenB = new Queen(Color.BLACK);
-        Point currentLocationB = new Point(5,1);
-        Point targetLocationB = new Point(5,5);
-
-        //WHITE
-        Assertions.assertThat(queenB.getMovingPath(currentLocationB, targetLocationB)).isEqualTo(false);
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @Test
-    void canMoveQueen() {
+    void canMoveBlack() {
         Queen queen = new Queen(Color.BLACK);
-        Point currentLocation = new Point(5, 1);
-        Point targetLocation = new Point(5, 5);
+        Point currentLocation = new Point(4, 1);
+        Point targetLocation = new Point(4, 5);
         Assertions.assertThat(queen.canMove(currentLocation, targetLocation)).isEqualTo(true);
     }
 
     @Test
-    void getMovingPathQueen() {
+    void canMoveWhite() {
+        Queen queen = new Queen(Color.WHITE);
+        Point currentLocation = new Point(4, 8);
+        Point targetLocation = new Point(4, 7);
+        Assertions.assertThat(queen.canMove(currentLocation, targetLocation)).isEqualTo(true);
+    }
+
+    @Test
+    void getMovingPathBlack() {
         Queen queen = new Queen(Color.BLACK);
-        Point currentLocation = new Point(5, 1);
-        Point targetLocation = new Point(5, 5);
+        Point currentLocation = new Point(4, 1);
+        Point targetLocation = new Point(4, 3);
         Assertions.assertThat(queen.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
     }
+
+    @Test
+    void getMovingPathWhite() {
+        Queen queen = new Queen(Color.WHITE);
+        Point currentLocation = new Point(4, 8);
+        Point targetLocation = new Point(4, 7);
+        Assertions.assertThat(queen.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
+    }
+}
 
 

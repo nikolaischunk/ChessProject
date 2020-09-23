@@ -2,16 +2,12 @@ package Test;
 
 import Chess.Color;
 import Chess.King;
-import Chess.Queen;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-
-//nikolais class
 class KingTest {
 
     @Test
@@ -37,6 +33,7 @@ class KingTest {
         Point targetLocation = new Point(4, 2);
         Assertions.assertThat(king.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
     }
+
     @Test
     void getMovingPathWhite() {
         King king = new King(Color.WHITE);

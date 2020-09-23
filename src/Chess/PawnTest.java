@@ -9,13 +9,6 @@ import java.awt.*;
 
 class PawnTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
 
     @Test
     void canMoveBlack() {
