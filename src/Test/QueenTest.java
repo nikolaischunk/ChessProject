@@ -10,20 +10,30 @@ import java.awt.*;
 //for simge
 class QueenTest {
 
+
     @Test
     void canMove() {
-        Queen queen = new Queen(Color.BLACK);
-        Point currentLocation = new Point(5,1);
-        Point targetLocation = new Point(5,5);
-        Assertions.assertThat(queen.canMove(currentLocation, targetLocation)).isEqualTo(true);
+        //BLACK
+        Queen queenB = new Queen(Color.BLACK);
+        Point currentLocationB = new Point(5,1);
+        Point targetLocationB = new Point(5,5);
+
+        //WHITE
+        Queen queenW = new Queen(Color.WHITE);
+        Point currentLocationW = new Point(5,1);
+        Point targetLocationW = new Point(5,5);
+        Assertions.assertThat(queenW.canMove(currentLocationW, targetLocationW)).isEqualTo(true);
     }
 
     @Test
     void getMovingPath(){
-        Queen queen = new Queen(Color.BLACK);
-        Point currentLocation = new Point(5,1);
-        Point targetLocation = new Point(5,5);
+        //BLACK
+        Queen queenB = new Queen(Color.BLACK);
+        Point currentLocationB = new Point(5,1);
+        Point targetLocationB = new Point(5,5);
 
-        Assertions.assertThat(queen.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
+        //WHITE
+        Assertions.assertThat(queenB.getMovingPath(currentLocationB, targetLocationB)).isEqualTo(false);
     }
-}
+
+
