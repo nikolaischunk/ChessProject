@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import java.awt.*;
 
-
+//for simge
 class QueenTest {
 
     @Test
