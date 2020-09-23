@@ -16,7 +16,14 @@ class QueenTest {
         Point currentLocation = new Point(5,1);
         Point targetLocation = new Point(5,5);
         Assertions.assertThat(queen.canMove(currentLocation, targetLocation)).isEqualTo(true);
-
     }
 
+    @Test
+    void getMovingPath(){
+        Queen queen = new Queen(Color.BLACK);
+        Point currentLocation = new Point(5,1);
+        Point targetLocation = new Point(5,5);
+
+        Assertions.assertThat(queen.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
+    }
 }
