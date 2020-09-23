@@ -97,7 +97,7 @@ public class Chessboard {
         if (figur.getColor() != playerColor) {
             ArrayList<Point> figurMovingPath = figur.getMovingPath(currentLocation, targetLocation);
             if (isAnyPointTaken(figurMovingPath)) {
-                board.put(targetLocation, board.get(currentLocation));
+                board.put(targetLocation, figur);
                 board.remove(currentLocation);
             } else {
                 return false;
@@ -109,5 +109,5 @@ public class Chessboard {
     public Map<Point, Figur> getBoard() {
         return board;
     }
-
+//hi
 }
