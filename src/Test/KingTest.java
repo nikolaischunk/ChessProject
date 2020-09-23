@@ -9,6 +9,8 @@ import java.awt.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
+//nikolais class
 class KingTest {
     void canMove() {
         Queen queen = new Queen(Chess.Color.BLACK);
