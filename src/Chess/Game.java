@@ -1,3 +1,5 @@
+package Chess;
+
 import java.awt.*;
 import java.util.Scanner;
 
@@ -17,10 +19,10 @@ public class Game {
     public void whereToMove() {
         Player currentPlayer = player1;
         Scanner scan = new Scanner(System.in);
-        System.out.println("Geben Sie die die x Kordinate an von der zu bewegenden Figur");
+        System.out.println("Geben Sie die die x Kordinate an von der zu bewegenden Chess.Figur");
         int currentPointX = scan.nextInt();
 
-        System.out.println("Geben Sie die die y Kordinate an von der zu bewegenden Figur");
+        System.out.println("Geben Sie die die y Kordinate an von der zu bewegenden Chess.Figur");
         int currentPointY = scan.nextInt();
 
         System.out.println("Geben Sie die die x Kordinate an von der Zielkordinate");

@@ -1,3 +1,5 @@
+package Chess;
+
 public class Player {
 
     private String nickname;
