@@ -106,10 +106,8 @@ public class Chessboard {
         return false;
     }
 
-    //test
-
     public Map<Point, Figur> getBoard() {
         return board;
     }
+//hi
 }
-
