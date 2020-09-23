@@ -11,10 +11,15 @@ public class Knight extends Figur {
         return currentLocation.distance(targetLocation) % oneMoveHorse == 0;
     }
 
-    @Override
+
     public ArrayList<Point> getMovingPath(Point currentLocation, Point targetLocation) {
-        return null;
+        ArrayList<java.awt.Point> movingPath = new ArrayList<>();
+
+        currentLocation.setLocation(--currentLocation.x, --currentLocation.y);
+        movingPath.add(currentLocation);
+        return movingPath;
     }
+
 
 
 }
