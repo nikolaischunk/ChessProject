@@ -1,28 +1,43 @@
 package Test;
 
 import Chess.Color;
+import Chess.King;
 import Chess.Queen;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class KingTest {
-    void canMove() {
-        Queen queen = new Queen(Chess.Color.BLACK);
-        Point currentLocation = new Point(4,1);
-        Point targetLocation = new Point(4,5);
-        Assertions.assertThat(queen.canMove(currentLocation, targetLocation)).isEqualTo(false);
+
+    @Test
+    void canMoveBlack() {
+        King king = new King(Chess.Color.BLACK);
+        Point currentLocation = new Point(4, 1);
+        Point targetLocation = new Point(4, 2);
+        Assertions.assertThat(king.canMove(currentLocation, targetLocation)).isEqualTo(false);
     }
 
     @Test
-    void getMovingPath(){
-        Queen queen = new Queen(Color.BLACK);
-        Point currentLocation = new Point(4,1);
-        Point targetLocation = new Point(4,2);
+    void canMoveWhite() {
+        King king = new King(Color.WHITE);
+        Point currentLocation = new Point(4, 8);
+        Point targetLocation = new Point(4, 7);
+        Assertions.assertThat(king.canMove(currentLocation, targetLocation)).isEqualTo(false);
+    }
 
-        Assertions.assertThat(queen.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
+    @Test
+    void getMovingPathBlack() {
+        King king = new King(Color.BLACK);
+        Point currentLocation = new Point(4, 1);
+        Point targetLocation = new Point(4, 2);
+        Assertions.assertThat(king.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
+    }
+    @Test
+    void getMovingPathWhite() {
+        King king = new King(Color.WHITE);
+        Point currentLocation = new Point(4, 8);
+        Point targetLocation = new Point(4, 7);
+        Assertions.assertThat(king.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
     }
 }
