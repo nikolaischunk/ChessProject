@@ -4,11 +4,21 @@ import Chess.Queen;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.awt.*;
 
 //for simge
 class QueenTest {
+
+    @BeforeEach
+    void setUp() {
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
 
     @Test
     void canMove() {
