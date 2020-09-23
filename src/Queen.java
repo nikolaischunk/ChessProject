@@ -92,12 +92,8 @@ public class Queen extends Figur {
                     distanceBetweenPoints = targetLocation.distance(currentLocation);
                 }
                 movingPath.remove(movingPath.size() - 1);
-
             }
-
-
         }
         return movingPath;
     }
-
 }
