@@ -37,8 +37,8 @@ public class Chessboard {
         board.put(new Point(1, 8), new Rook(Color.WHITE));
         board.put(new Point(2, 8), new Knight(Color.WHITE));
         board.put(new Point(3, 8), new Bishop(Color.WHITE));
-        board.put(new Point(4, 8), new King(Color.WHITE));
-        board.put(new Point(5, 8), new Queen(Color.WHITE));
+        board.put(new Point(5, 8), new King(Color.WHITE));
+        board.put(new Point(4, 8), new Queen(Color.WHITE));
         board.put(new Point(6, 8), new Bishop(Color.WHITE));
         board.put(new Point(7, 8), new Knight(Color.WHITE));
         board.put(new Point(8, 8), new Rook(Color.WHITE));
