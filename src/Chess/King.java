@@ -42,7 +42,7 @@ public class King extends Figur {
                     movingPath.add(((Point) currentLocation.clone()));
                 }
 
-                //Stimmt Y nicht überrein
+                //matches not Y
             } else if (currentLocation.y != targetLocation.y) {
                 int difference = targetLocation.y - currentLocation.y;
 
@@ -63,6 +63,7 @@ public class King extends Figur {
             double distanceBetweenPoints = targetLocation.distance(currentLocation);
 
             if (differenceX > 0 && differenceY > 0) {
+
                 while (distanceBetweenPoints != 0) {
                     currentLocation.setLocation(++currentLocation.x, ++currentLocation.y);
                     movingPath.add(currentLocation);
@@ -92,15 +93,11 @@ public class King extends Figur {
                     movingPath.add(currentLocation);
                     distanceBetweenPoints = targetLocation.distance(currentLocation);
                 }
-
             }
-
-
         } else {
             System.out.println("Please type in a field number for the king");
         }
         return movingPath;
     }
-
 }
 

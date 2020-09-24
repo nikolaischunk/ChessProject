@@ -4,10 +4,13 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Pawn extends Figur {
+
     public Pawn(Color color) {
         super(color, color.equals(Color.WHITE) ? '♟' : '♙');
     }
+
     public boolean canMove(Point currentLocation, Point targetLocation) {
+
         if (currentLocation.equals(targetLocation)) {
             return false;
         }
@@ -47,7 +50,6 @@ public class Pawn extends Figur {
         return false;
     }
 
-    @Override
     public ArrayList<Point> getMovingPath(Point currentLocation, Point targetLocation) {
         return null;
     }

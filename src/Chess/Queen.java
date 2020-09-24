@@ -26,33 +26,38 @@ public class Queen extends Figur {
         int differenceY = targetLocation.y - currentLocation.y;
 
         if (currentLocation.distance(targetLocation) % oneMoveStraight == 0) {
+
             if (currentLocation.x != targetLocation.x) {
                 int difference = targetLocation.x - currentLocation.x;
-                if (difference < 0) { // wenn X  TL minus CL im negativen Bereich ist
+
+                // If X  TL minus CL is negative
+                if (difference < 0) {
                     for (int i = 0; i <= difference; i++) {
                         movingPath.add(new Point(targetLocation.x + 1, targetLocation.y));
                     }
 
-                    // wenn X TL minus CL im positiven Bereich ist
+                    // if X TL minus CL is positive
                 } else if (difference > 0) {
                     for (int i = 0; i <= difference; i++) {
                         movingPath.add(new Point(targetLocation.x - 1, targetLocation.y));
                     }
                 }
-                // Stimmt Y nicht überein? Wenn y nicht y ist
-            } else if (currentLocation.y != targetLocation.y) { //
+                // is y = y
+            } else if (currentLocation.y != targetLocation.y) {
                 int difference = targetLocation.y - currentLocation.y;
 
-                if (difference < 0) { // wenn Y TL minus CL im negativen Bereich ist
+                // if Y TL minus CL is negative
+                if (difference < 0) {
                     for (int i = 0; i <= difference; i++) {
                         movingPath.add(new Point(targetLocation.x, targetLocation.y + i));
                     }
 
-                } else if (difference > 0) {// wenn Y TL minus CL im positiven Bereich ist
+                    //if Y TL minus CL is positive
+                } else if (difference > 0) {
                     for (int i = 0; i <= difference; i++) {
                         movingPath.add(new Point(targetLocation.x, targetLocation.y - i));
                     }
-                 }
+                }
 
             } else {
                 System.out.println("Please type in a valid number");
