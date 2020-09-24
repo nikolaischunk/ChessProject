@@ -97,7 +97,7 @@ public class King extends Figur {
 
 
         } else {
-            System.out.println("Bitte gebe ein für den König valides Feld an!");
+            System.out.println("Please type in a field number for the king");
         }
         return movingPath;
     }

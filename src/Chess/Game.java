@@ -19,16 +19,16 @@ public class Game {
     public void whereToMove() {
         Player currentPlayer = player1;
         Scanner scan = new Scanner(System.in);
-        System.out.println("Geben Sie die die x Kordinate an von der zu bewegenden Chess.Figur");
+        System.out.println("Please type in the x coordinate of the figure you want to move");
         int currentPointX = scan.nextInt();
 
-        System.out.println("Geben Sie die die y Kordinate an von der zu bewegenden Chess.Figur");
+        System.out.println("Please type in the y coordinate of the figure you want to move");
         int currentPointY = scan.nextInt();
 
-        System.out.println("Geben Sie die die x Kordinate an von der Zielkordinate");
+        System.out.println("Please type in the x coordinate of the target location");
         int targetPointX = scan.nextInt();
 
-        System.out.println("Geben Sie die die y Kordinate an von der Zielkordinate");
+        System.out.println("Please type in the y coordinate of the target location");
         int targetPointY = scan.nextInt();
 
 

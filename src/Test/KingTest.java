@@ -15,7 +15,7 @@ class KingTest {
         King king = new King(Chess.Color.BLACK);
         Point currentLocation = new Point(4, 1);
         Point targetLocation = new Point(4, 2);
-        Assertions.assertThat(king.canMove(currentLocation, targetLocation)).isEqualTo(false);
+        Assertions.assertThat(king.canMove(currentLocation, targetLocation)).isEqualTo(true);
     }
 
     @Test
@@ -23,22 +23,7 @@ class KingTest {
         King king = new King(Color.WHITE);
         Point currentLocation = new Point(4, 8);
         Point targetLocation = new Point(4, 7);
-        Assertions.assertThat(king.canMove(currentLocation, targetLocation)).isEqualTo(false);
+        Assertions.assertThat(king.canMove(currentLocation, targetLocation)).isEqualTo(true);
     }
-
-    @Test
-    void getMovingPathBlack() {
-        King king = new King(Color.BLACK);
-        Point currentLocation = new Point(4, 1);
-        Point targetLocation = new Point(4, 2);
-        Assertions.assertThat(king.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
-    }
-
-    @Test
-    void getMovingPathWhite() {
-        King king = new King(Color.WHITE);
-        Point currentLocation = new Point(4, 8);
-        Point targetLocation = new Point(4, 7);
-        Assertions.assertThat(king.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
-    }
+    
 }
