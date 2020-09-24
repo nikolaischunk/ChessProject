@@ -11,6 +11,7 @@ public class Bishop extends Figur {
 
     public boolean canMove(Point currentLocation, Point targetLocation) {
         double oneMoveDiagonal = 1.4142135623730951;
+
         if (currentLocation.distance(targetLocation) % oneMoveDiagonal == 0) {
             return true;
         } else {
@@ -18,8 +19,7 @@ public class Bishop extends Figur {
         }
     }
 
-
-    public ArrayList<Point> getMovingPath(Point currentLocation, Point targetLocation){
+    public ArrayList<Point> getMovingPath(Point currentLocation, Point targetLocation) {
 
         ArrayList<Point> movingPath = new ArrayList<>();
         double oneMoveDiagonal = 1.4142135623730951;
@@ -65,7 +65,6 @@ public class Bishop extends Figur {
                 movingPath.remove(movingPath.size() - 1);
             }
         }
-
-        return null;
+        return movingPath;
     }
 }

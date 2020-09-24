@@ -19,6 +19,7 @@ public class Knight extends Figur {
 
         currentLocation.setLocation(--currentLocation.x, --currentLocation.y);
         movingPath.add(currentLocation);
+
         return movingPath;
     }
 
