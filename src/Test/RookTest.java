@@ -27,5 +27,19 @@ class RookTest {
         Assertions.assertThat(rook.canMove(currentLocation, targetLocation)).isEqualTo(true);
     }
 
+    @Test
+    void getMovingPathBlack() {
+        Rook rook = new Rook(Color.BLACK);
+
+        Point currentLocation = new Point(8, 1);
+        Point targetLocation = new Point(8, 3);
+
+        ArrayList<Point> movingPath = new ArrayList();
+        movingPath.add(new Point(8, 3));
+        movingPath.add(new Point(8, 2));
+        movingPath.add(new Point(8, 1));
+
+        Assertions.assertThat(rook.getMovingPath(currentLocation, targetLocation).size()).isEqualTo(movingPath.size());
+    }
 
 }
