@@ -16,7 +16,6 @@ public class Bishop extends Figur {
         } else {
             return false;
         }
-
     }
 
 
