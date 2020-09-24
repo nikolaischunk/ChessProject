@@ -52,10 +52,10 @@ public class Rook extends Figur {
                     }
 
                 } else {
-                    System.out.println("Bitte gebe eine Gültige Zahl ein.");
+                    System.out.println("Pleas type in a valid number.");
                 }
             }else{
-                System.out.println("ERROR1");
+                System.out.println("ERROR");
             }
             return movingPath;
 

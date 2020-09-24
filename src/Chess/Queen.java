@@ -52,10 +52,10 @@ public class Queen extends Figur {
                     for (int i = 0; i <= difference; i++) {
                         movingPath.add(new Point(targetLocation.x, targetLocation.y - i));
                     }
-                }
+                 }
 
             } else {
-                System.out.println("Bitte gebe eine Gültige Zahl ein.");
+                System.out.println("Please type in a valid number");
             }
         } else if (currentLocation.distance(targetLocation) % oneMoveDiagonal == 0) {
             double distanceBetweenPoints = targetLocation.distance(currentLocation);
