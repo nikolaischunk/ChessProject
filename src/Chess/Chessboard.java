@@ -14,7 +14,7 @@ public class Chessboard {
     }
 
     public void putFiguresIntoMap() {
-        //Black Figures
+        //Put Black Figures in the Map
         board.put(new Point(1, 1), new Rook(Color.BLACK));
         board.put(new Point(2, 1), new Knight(Color.BLACK));
         board.put(new Point(3, 1), new Bishop(Color.BLACK));
@@ -33,6 +33,7 @@ public class Chessboard {
         board.put(new Point(7, 2), new Pawn(Color.BLACK));
         board.put(new Point(8, 2), new Pawn(Color.BLACK));
 
+        //Put White Figures in the Map
         board.put(new Point(1, 8), new Rook(Color.WHITE));
         board.put(new Point(2, 8), new Knight(Color.WHITE));
         board.put(new Point(3, 8), new Bishop(Color.WHITE));
@@ -53,7 +54,7 @@ public class Chessboard {
         // System.out.println(board.toString()); //check if those where added to the HashMaP
     }
 
-    private Boolean isAnyPointTaken(ArrayList<Point> getMovingPath) {
+    public Boolean isAnyPointTaken(ArrayList<Point> getMovingPath) {
         for (Point p : getMovingPath) {
             isTargetPointTaken(p);
         }
@@ -72,23 +73,7 @@ public class Chessboard {
 
     public void printBoard() {
         System.out.println("\t╔═══════╦═══════╦═══════╦═══════╦═══════╦═══════╦═══════╦═══════╗");
-        int iii = 0;
-        for (int ii = 8; ii >= 1; ii--, iii++) {
-            System.out.print(ii + "\t");
-            for (int i = 1; i <= 8; i++) {
-                Figur figure = board.get(new Point(i, ii));
-                System.out.print("║");
-                if (figure != null) {
-                    System.out.print("\t" + figure.getAppearance() + "\t");
-                } else {
-                    System.out.print("\t\t");
-                }
-            }
-            System.out.println("║");
-            if (iii < 7) {
-                System.out.println("\t╠═══════╬═══════╬═══════╬═══════╬═══════╬═══════╬═══════╬═══════╣");
-            }
-        }
+        printLogic();
         System.out.println("\t╚═══════╩═══════╩═══════╩═══════╩═══════╩═══════╩═══════╩═══════╝");
         System.out.println("\t\t1\t\t2\t\t3\t\t4\t\t5\t\t6\t\t7\t\t8");
     }
@@ -108,6 +93,25 @@ public class Chessboard {
         return false;
     }
 
+    public void printLogic(){
+        int iii = 0;
+        for (int ii = 8; ii >= 1; ii--, iii++) {
+            System.out.print(ii + "\t");
+            for (int i = 1; i <= 8; i++) {
+                Figur figure = board.get(new Point(i, ii));
+                System.out.print("║");
+                if (figure != null) {
+                    System.out.print("\t" + figure.getAppearance() + "\t");
+                } else {
+                    System.out.print("\t\t");
+                }
+            }
+            System.out.println("║");
+            if (iii < 7) {
+                System.out.println("\t╠═══════╬═══════╬═══════╬═══════╬═══════╬═══════╬═══════╬═══════╣");
+            }
+        }
+    }
     public Map<Point, Figur> getBoard() {
         return board;
     }
