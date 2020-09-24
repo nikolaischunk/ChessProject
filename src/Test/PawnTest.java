@@ -1,5 +1,7 @@
-package Chess;
+package Test;
 
+import Chess.Color;
+import Chess.Pawn;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +14,7 @@ class PawnTest {
 
     @Test
     void canMoveBlack() {
-        Pawn pawn = new Pawn(Color.BLACK);
+        Pawn pawn = new Pawn(Chess.Color.BLACK);
         Point currentLocation = new Point(2, 2);
         Point targetLocation = new Point(2, 3);
         Assertions.assertThat(pawn.canMove(currentLocation, targetLocation)).isEqualTo(true);
@@ -21,7 +23,7 @@ class PawnTest {
 
     @Test
     void canMoveWhite() {
-        Pawn pawn = new Pawn(Color.WHITE);
+        Pawn pawn = new Pawn(Chess.Color.WHITE);
         Point currentLocation = new Point(2, 7);
         Point targetLocation = new Point(2, 8);
         Assertions.assertThat(pawn.canMove(currentLocation, targetLocation)).isEqualTo(true);
@@ -30,7 +32,7 @@ class PawnTest {
 
     @Test
     void getMovingPathBlack() {
-        Pawn pawn = new Pawn(Color.BLACK);
+        Pawn pawn = new Pawn(Chess.Color.BLACK);
         Point currentLocation = new Point(2, 2);
         Point targetLocation = new Point(2, 2);
         Assertions.assertThat(pawn.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
