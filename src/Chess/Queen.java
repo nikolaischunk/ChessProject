@@ -11,6 +11,7 @@ public class Queen extends Figur {
         super(color, color.equals(Color.WHITE) ? '♛' : '♕');
     }
 
+
     public boolean canMove(Point currentLocation, Point targetLocation) {
         if (currentLocation.distance(targetLocation) % oneMoveDiagonal == 0 || currentLocation.distance(targetLocation) % oneMoveStraight == 0) {
             return true;
@@ -22,8 +23,9 @@ public class Queen extends Figur {
     public ArrayList<Point> getMovingPath(Point currentLocation, Point targetLocation) {
         ArrayList<Point> movingPath = new ArrayList<>();
 
-        int differenceX = targetLocation.x - currentLocation.x;
         int differenceY = targetLocation.y - currentLocation.y;
+        int differenceX = targetLocation.x - currentLocation.x;
+
 
         if (currentLocation.distance(targetLocation) % oneMoveStraight == 0) {
 
@@ -100,7 +102,9 @@ public class Queen extends Figur {
                 }
                 movingPath.remove(movingPath.size() - 1);
             }
+
         }
         return movingPath;
     }
+
 }

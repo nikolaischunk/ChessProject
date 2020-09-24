@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import java.awt.*;
 import java.util.ArrayList;
 
-//for simge
 class QueenTest {
 
 
@@ -29,17 +28,18 @@ class QueenTest {
     }
 
     @Test
-    void getMovingPath() {
+    void getMovingPathBlack() {
         Queen queen = new Queen(Color.BLACK);
 
-        Point currentLocation = new Point(4, 2);
-        Point targetLocation = new Point(2, 3);
+        Point currentLocation = new Point(5, 1);
+        Point targetLocation = new Point(5, 3);
 
-        ArrayList movingPath = new ArrayList();
-        movingPath.add(5, 1);
-        movingPath.add(5, 2);
+        ArrayList<Point> movingPath = new ArrayList();
+        movingPath.add(new Point(5, 3));
+        movingPath.add(new Point(5, 2));
+        movingPath.add(new Point(5, 1));
 
-        Assertions.assertThat(queen.getMovingPath(currentLocation, targetLocation).size()).isEqualTo(movingPath);
+        Assertions.assertThat(queen.getMovingPath(currentLocation, targetLocation).size()).isEqualTo(movingPath.size());
     }
 }
 

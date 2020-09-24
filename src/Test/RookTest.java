@@ -1,11 +1,13 @@
 package Test;
 
 import Chess.Color;
+import Chess.Queen;
 import Chess.Rook;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 class RookTest {
 
@@ -24,5 +26,6 @@ class RookTest {
         Point targetLocation = new Point(1, 7);
         Assertions.assertThat(rook.canMove(currentLocation, targetLocation)).isEqualTo(true);
     }
+
 
 }
