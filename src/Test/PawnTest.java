@@ -30,19 +30,4 @@ class PawnTest {
 
     }
 
-    @Test
-    void getMovingPathBlack() {
-        Pawn pawn = new Pawn(Chess.Color.BLACK);
-        Point currentLocation = new Point(2, 2);
-        Point targetLocation = new Point(2, 2);
-        Assertions.assertThat(pawn.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
-    }
-
-    @Test
-    void getMovingPathWHITE() {
-        Pawn pawn = new Pawn(Color.WHITE);
-        Point currentLocation = new Point(2, 2);
-        Point targetLocation = new Point(2, 2);
-        Assertions.assertThat(pawn.getMovingPath(currentLocation, targetLocation)).isEqualTo(false);
-    }
 }
