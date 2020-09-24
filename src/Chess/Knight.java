@@ -22,7 +22,4 @@ public class Knight extends Figur {
         return movingPath;
     }
 
-
-
 }
-//return getMovingPath(currentLocation, targetLocation);
